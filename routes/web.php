@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\YamlFrontMatter\YamlFrontMatter; 
+use Illuminate\Support\Facades\File;
 use App\Models\Post;
 
 /*
@@ -16,7 +18,7 @@ use App\Models\Post;
 
 Route::get('/', function () {
     return view("posts",[
-        'posts' => Post::all()
+        'posts' => Post::all(), 
     ]); 
 });
 
