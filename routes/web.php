@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Spatie\YamlFrontMatter\YamlFrontMatter; 
-use Illuminate\Support\Facades\File;
 use App\Models\Post;
 
 /*
