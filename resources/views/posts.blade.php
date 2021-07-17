@@ -7,6 +7,7 @@
            </a>
         </h1>
         <p>{{ $post->excerpt }}</p> 
+       <a href="#"><i>{{ $post->category->name }}</i></a>
     </article>
     @endforeach
 </x-layout>
