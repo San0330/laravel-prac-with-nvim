@@ -27,10 +27,10 @@ Route::get('/', function () {
     ]); 
 });
 
-Route::get('posts/{post:slug}',function(Post $post){
+Route::get('posts/{post:slug}',function(Post $post){    
     return view('post',[
         'post' => $post 
-    ]);
+    ]);    
 })->where('post','[A-z-]+');
 
 Route::get('categories/{category:slug}',function(Category $category){

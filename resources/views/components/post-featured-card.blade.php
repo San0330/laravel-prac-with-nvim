@@ -4,7 +4,7 @@
     class="transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
     <div class="py-6 px-5 lg:flex">
         <div class="flex-1 lg:mr-8">
-            <img src="./images/illustration-1.png" alt="Blog Post illustration" class="rounded-xl">
+            <img src="/images/illustration-1.png" alt="Blog Post illustration" class="rounded-xl">
         </div>
 
         <div class="flex-1 flex flex-col justify-between">
@@ -36,7 +36,7 @@
 
             <footer class="flex justify-between items-center mt-8">
                 <div class="flex items-center text-sm">
-                    <img src="./images/lary-avatar.svg" alt="Lary avatar">
+                    <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3">
                         <h5 class="font-bold">{{ $post->author->name }}</h5>
                         <h6>Mascot at Laracasts</h6>
