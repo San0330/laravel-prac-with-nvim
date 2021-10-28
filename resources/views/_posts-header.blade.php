@@ -16,8 +16,9 @@
              <select class="flex-1 appearance-none bg-transparent py-2 pl-3 pr-9 text-sm font-semibold">
                  <option value="category" disabled selected>Category
                  </option>
-                 <option value="personal">Personal</option>
-                 <option value="business">Business</option>
+                 @foreach ($categories as $category)
+                 <option value="{{ $category->slug }}">{{ $category->name }}</option>
+                 @endforeach
              </select>
 
              <svg class="transform -rotate-90 absolute pointer-events-none" style="right: 12px;" width="22" height="22" viewBox="0 0 22 22">
