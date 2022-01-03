@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\Category;
 
 class PostController extends Controller
 {
@@ -12,10 +11,12 @@ class PostController extends Controller
 
         // DB::listen(function ($query) {
         //     logger($query->sql);
-        // });        
+        // });
 
         return view("posts.index", [
-            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->get(),
+            'posts' => Post::latest()->filter(
+                request(['search', 'category', 'author'])
+            )->paginate(6)->withQueryString(),
         ]);
     }
 
