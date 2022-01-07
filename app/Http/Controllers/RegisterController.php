@@ -21,7 +21,9 @@ class RegisterController extends Controller
             'password' => 'required|min:7|max:255'
         ]);
 
-        User::create($validatedRequestValues);
+        $user = User::create($validatedRequestValues);
+
+        auth()->login($user);
 
         session()->flash('success', 'Your account is created.');
 
