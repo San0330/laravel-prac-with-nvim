@@ -23,6 +23,8 @@ class RegisterController extends Controller
 
         User::create($validatedRequestValues);
 
+        session()->flash('success', 'Your account is created.');
+
         return redirect('/');
     }
 }
