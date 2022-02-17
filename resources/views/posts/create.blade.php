@@ -4,7 +4,7 @@
             Publish New Post
         </h1>
         <x-panel>
-            <form action="/admin/posts" method="post">
+            <form action="/admin/posts" method="post" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-6">
@@ -25,6 +25,16 @@
                     <input type="text" class="border border-gray-400 p-2 w-full" name="slug" id="slug"
                         value="{{ old('slug') }}" required>
                     @error('slug')
+                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-6">
+                    <label for="thumbnail" class="block mb-2 uppercase font-bold text-xs text-gray-700">
+                        Thumbnail
+                    </label>
+                    <input type="file" class="border border-gray-400 p-2 w-full" name="thumbnail" id="thumbnail" required>
+                    @error('thumbnail')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
                 </div>
