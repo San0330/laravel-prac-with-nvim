@@ -37,6 +37,7 @@ class PostController extends Controller
 
     public function store()
     {
+        // add a test comment from test branch
         $attributes = request()->validate([
             'title' => 'required',
             'slug' => 'required|unique:posts,slug',
